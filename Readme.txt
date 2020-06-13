@@ -9,3 +9,5 @@ An imbalanced class distribution will have one or more classes with few examples
 Undersampling techniques remove examples from the training dataset that belong to the majority class in order to better balance the class distribution, such as reducing the skew from a 1:100 to a 1:10, 1:2, or even a 1:1 class distribution.
 
 Oversampling is the scenario where we will produce synthetic data for minority class with the available examples and make the distribution balanced.
+
+But these oversampling and under sampling should be done while cross validation but not before cross validation because if we sample the data before CV, we are providing the artificial data to the validation which will lead us to wrong assumptions about the model. Instead if we sample the data while CV we can provide the real scenario for validation set which will give us the flavour of test scenario and can fine tune the model appropriately. MAIN POINT TO KEEP IN MIND.
